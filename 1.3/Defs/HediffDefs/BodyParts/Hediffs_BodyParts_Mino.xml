@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!--Bases-->
+  <RecipeDef Name="SurgeryInstallSteelPartBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="True">
+    <workAmount>1500</workAmount>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef Name="SurgeryInstallPlasteelPartBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="True">
+    <workAmount>1500</workAmount>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef Name="SurgeryInstallSilverPartBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="True">
+    <workAmount>1500</workAmount>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Silver</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <RecipeDef Name="SurgeryInstallGoldPartBase" ParentName="SurgeryInstallBodyPartArtificialBase" Abstract="True">
+    <workAmount>1500</workAmount>
+    <skillRequirements>
+      <Medicine>3</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Gold</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Gold</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+  <!-- Wooden Hoof -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WoodenHoof</defName>
+    <label>wooden hoof</label>
+    <labelNoun>a wooden hoof</labelNoun>
+    <description>An installed wooden hoof.</description>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.80</partEfficiency>
+    </addedPartProps>
+    <spawnThingOnRemoved>WoodLog</spawnThingOnRemoved>
+  </HediffDef>
+  <RecipeDef ParentName="SurgeryInstallWoodenPartBase">
+    <defName>InstallWoodenHoof</defName>
+    <label>install wooden hoof</label>
+    <description>Install a wooden hoof.</description>
+    <descriptionHyperlinks>
+      <ThingDef>WoodLog</ThingDef>
+      <HediffDef>WoodenHoof</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing wooden hoof.</jobString>
+    <workAmount>1000</workAmount>
+    <appliedOnFixedBodyParts>
+      <li>Hoof</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>WoodenHoof</addsHediff>
+  </RecipeDef>
+  <!-- false Horns -->
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>WoodenHorn</defName>
+    <label>wooden horn</label>
+    <labelNoun>a wooden horn</labelNoun>
+    <description>An installed wooden horn.</description>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.80</partEfficiency>
+    </addedPartProps>
+    <spawnThingOnRemoved>WoodLog</spawnThingOnRemoved>
+  </HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SteelHorn</defName>
+    <label>steel horn</label>
+    <labelNoun>a steel horn</labelNoun>
+    <description>An installed steel horn.</description>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1</partEfficiency>
+    </addedPartProps>
+    <spawnThingOnRemoved>Steel</spawnThingOnRemoved>
+  </HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>PlasteelHorn</defName>
+    <label>plasteel horn</label>
+    <labelNoun>a plasteel horn</labelNoun>
+    <description>An installed plasteel horn.</description>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.20</partEfficiency>
+    </addedPartProps>
+    <spawnThingOnRemoved>Plasteel</spawnThingOnRemoved>
+  </HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>SilverHorn</defName>
+    <label>silver horn</label>
+    <labelNoun>a silver horn</labelNoun>
+    <description>An installed silver horn.</description>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.80</partEfficiency>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <PawnBeauty>0.5</PawnBeauty>
+        </statOffsets>
+      </li>
+    </stages>
+    <spawnThingOnRemoved>Silver</spawnThingOnRemoved>
+  </HediffDef>
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>GoldHorn</defName>
+    <label>gold horn</label>
+    <labelNoun>a gold horn</labelNoun>
+    <description>An installed gold horn.</description>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>0.80</partEfficiency>
+    </addedPartProps>
+    <stages>
+      <li>
+        <statOffsets>
+          <PawnBeauty>1</PawnBeauty>
+        </statOffsets>
+      </li>
+    </stages>
+    <spawnThingOnRemoved>Gold</spawnThingOnRemoved>
+  </HediffDef>
+  <RecipeDef ParentName="SurgeryInstallWoodenPartBase">
+    <defName>InstallWoodenHorn</defName>
+    <label>install wooden horn</label>
+    <description>Install a wooden horn.</description>
+    <descriptionHyperlinks>
+      <ThingDef>WoodLog</ThingDef>
+      <HediffDef>WoodenHorn</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing wooden horn.</jobString>
+    <workAmount>1000</workAmount>
+    <appliedOnFixedBodyParts>
+      <li>Horn</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>WoodenHorn</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryInstallSteelPartBase">
+    <defName>InstallSteelHorn</defName>
+    <label>install steel horn</label>
+    <description>Install a steel horn.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Steel</ThingDef>
+      <HediffDef>SteelHorn</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing steel horn.</jobString>
+    <workAmount>1000</workAmount>
+    <appliedOnFixedBodyParts>
+      <li>Horn</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SteelHorn</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryInstallPlasteelPartBase">
+    <defName>InstallPlasteelHorn</defName>
+    <label>install plasteel horn</label>
+    <description>Install a plasteel horn.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Plasteel</ThingDef>
+      <HediffDef>PlasteelHorn</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing plasteel horn.</jobString>
+    <workAmount>1000</workAmount>
+    <appliedOnFixedBodyParts>
+      <li>Horn</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>PlasteelHorn</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryInstallSilverPartBase">
+    <defName>InstallSilverHorn</defName>
+    <label>install silver horn</label>
+    <description>Install a silver horn.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Silver</ThingDef>
+      <HediffDef>SilverHorn</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing silver horn.</jobString>
+    <workAmount>1000</workAmount>
+    <appliedOnFixedBodyParts>
+      <li>Horn</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>SilverHorn</addsHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryInstallGoldPartBase">
+    <defName>InstallGoldHorn</defName>
+    <label>install gold horn</label>
+    <description>Install a gold horn.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Gold</ThingDef>
+      <HediffDef>GoldHorn</HediffDef>
+    </descriptionHyperlinks>
+    <jobString>Installing gold horn.</jobString>
+    <workAmount>1000</workAmount>
+    <appliedOnFixedBodyParts>
+      <li>Horn</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>GoldHorn</addsHediff>
+  </RecipeDef>
+</Defs>

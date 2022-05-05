@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<loadFolders>
+  <v1.3>
+    <li>/</li>
+    <li>1.3</li>
+    <li IfModActive="Ludeon.Rimworld.Royalty">Compatibility\1.3\Royalty_Patch</li>
+    <li IfModActive="Ludeon.Rimworld.Ideology">Compatibility\1.3\Ideology_Patch</li>
+    <li IfModActive="OskarPotocki.VanillaFactionsExpanded.MedievalModule">Compatibility\1.3\VFE_Medieval</li>
+    <li IfModActive="OskarPotocki.VanillaFactionsExpanded.SettlersModule">Compatibility\1.3\VFE_Settlers</li>
+    <li IfModActive="OskarPotocki.VFE.Vikings">Compatibility\1.3\VFE_Vikings</li>
+    <li IfModActive="VanillaExpanded.VAPPE">Compatibility\1.3\VE_Apparel</li>
+    <li IfModActive="VanillaExpanded.VARME">Compatibility\1.3\VE_Armour</li>
+  </v1.3>
+</loadFolders>

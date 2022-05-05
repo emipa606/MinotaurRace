@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BeardDef>
+    <defName>Mino_NoBeard</defName>
+    <label>no beard (Minotaur)</label>
+    <texPath>Things/Mote/Transparent</texPath>
+    <!-- Invisible -->
+    <iconPath>Things/Mote/Transparent</iconPath>
+    <!-- Invisible -->
+    <category>Minimal</category>
+    <styleTags>
+      <li>NoBeard</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Anchor</defName>
+    <label>anchor (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardAnchor</texPath>
+    <styleGender>Male</styleGender>
+    <category>Punk</category>
+    <styleTags>
+      <li>MinoBeardPunk</li>
+      <li>MinoBeardShort</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Bushy</defName>
+    <label>bushy (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardBalin</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>MinoBeardTribal</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Norse</defName>
+    <label>norse (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardBifur</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>MinoBeardTribal</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Boxed</defName>
+    <label>boxed (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardBoxed</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>MinoBeardUrban</li>
+      <li>MinoBeardRural</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Circle</defName>
+    <label>circle (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardCircle</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>MinoBeardUrban</li>
+      <li>MinoBeardRural</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_BeardCurly</defName>
+    <label>curly (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardCurly</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>MinoBeardTribal</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Curtain</defName>
+    <label>curtain (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardCurtain</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>MinoBeardUrban</li>
+      <li>MinoBeardRural</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_BushyStyled</defName>
+    <label>bushy styled (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardDori</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>MinoBeardUrban</li>
+      <li>MinoBeardRural</li>
+      <li>MinoBeardTribal</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Ducktail</defName>
+    <label>ducktail (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardDucktail</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>MinoBeardUrban</li>
+      <li>MinoBeardRural</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_StacheAndChops</defName>
+    <label>stache and chops (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardDwalin</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>MinoBeardTribal</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Fork</defName>
+    <label>fork (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardFork</texPath>
+    <styleGender>Male</styleGender>
+    <category>Punk</category>
+    <styleTags>
+      <li>MinoBeardPunk</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_French</defName>
+    <label>french (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardFrench</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>MinoBeardUrban</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Full</defName>
+    <label>full (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardFull</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>MinoBeardUrban</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Goatee</defName>
+    <label>goatee (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardGoatee</texPath>
+    <styleGender>Male</styleGender>
+    <offsetNarrowEast>(-0.01,0,0.03)</offsetNarrowEast>
+    <offsetNarrowSouth>(0,0,0.05)</offsetNarrowSouth>
+    <category>Urban</category>
+    <styleTags>
+      <li>MinoBeardUrban</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Classy</defName>
+    <label>classy (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardImperial</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>MinoBeardUrban</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Braided</defName>
+    <label>braided (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardKhal</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>MinoBeardTribal</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Lincoln</defName>
+    <label>lincoln (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardLincoln</texPath>
+    <styleGender>Male</styleGender>
+    <offsetNarrowEast>(-0.05,0,0)</offsetNarrowEast>
+    <category>Rural</category>
+    <styleTags>
+      <li>MinoBeardRural</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_LongDutch</defName>
+    <label>long dutch (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardLongDutch</texPath>
+    <styleGender>Male</styleGender>
+    <category>Rural</category>
+    <styleTags>
+      <li>MinoBeardRural</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Machete</defName>
+    <label>machete (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardMachete</texPath>
+    <styleGender>Male</styleGender>
+    <category>Moustache</category>
+    <styleTags>
+      <li>MinoBeardPunk</li>
+      <li>MinoMoustacheOnly</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Moustache</defName>
+    <label>moustache (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardMoustache</texPath>
+    <styleGender>Male</styleGender>
+    <category>Moustache</category>
+    <styleTags>
+      <li>MinoBeardUrban</li>
+      <li>MinoMoustacheOnly</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_MuttonChops</defName>
+    <label>mutton chops (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardMuttonChops</texPath>
+    <styleGender>Male</styleGender>
+    <category>Rural</category>
+    <styleTags>
+      <li>MinoBeardRural</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_TriBraid</defName>
+    <label>tri-braid (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardNori</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>MinoBeardTribal</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_OldDutch</defName>
+    <label>old dutch (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardOldDutch</texPath>
+    <styleGender>Male</styleGender>
+    <offsetNarrowEast>(-0.05,0,0)</offsetNarrowEast>
+    <category>Rural</category>
+    <styleTags>
+      <li>MinoBeardRural</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Seer</defName>
+    <label>seer (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardSeer</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>MinoBeardTribal</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_SideWhiskers</defName>
+    <label>side whiskers (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardSideWhiskers</texPath>
+    <styleGender>Male</styleGender>
+    <category>Rural</category>
+    <styleTags>
+      <li>MinoBeardRural</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_SoulPatch</defName>
+    <label>soul patch (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardSoulPatch</texPath>
+    <styleGender>Male</styleGender>
+    <offsetNarrowEast>(-0.04,0,0)</offsetNarrowEast>
+    <offsetNarrowSouth>(0,0,0.02)</offsetNarrowSouth>
+    <category>Punk</category>
+    <styleTags>
+      <li>MinoBeardPunk</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Stubble</defName>
+    <label>stubble (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardStubble</texPath>
+    <styleGender>Male</styleGender>
+    <offsetNarrowSouth>(0,0,0.02)</offsetNarrowSouth>
+    <category>Minimal</category>
+    <styleTags>
+      <li>MinoBeardPunk</li>
+      <li>MinoBeardUrban</li>
+      <li>MinoBeardRural</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Urist</defName>
+    <label>urist (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardUrist</texPath>
+    <styleGender>Male</styleGender>
+    <category>Tribal</category>
+    <styleTags>
+      <li>MinoBeardTribal</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_VanDyke</defName>
+    <label>VanDyke (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardVanDyke</texPath>
+    <styleGender>Male</styleGender>
+    <category>Urban</category>
+    <styleTags>
+      <li>MinoBeardUrban</li>
+    </styleTags>
+  </BeardDef>
+  <BeardDef>
+    <defName>Mino_Wizard</defName>
+    <label>wizard (Minotaur)</label>
+    <texPath>Things/Pawn/Minotaur/Beards/BeardWizard</texPath>
+    <styleGender>Male</styleGender>
+    <category>Rural</category>
+    <styleTags>
+      <li>MinoBeardRural</li>
+    </styleTags>
+  </BeardDef>
+</Defs>

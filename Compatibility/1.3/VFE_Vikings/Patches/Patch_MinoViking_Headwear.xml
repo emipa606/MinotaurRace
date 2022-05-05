@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAddModExtension">
+    <!-- This xpath is not the same as a texture path, it's wierd like that. Most of the time you will only have to change the defName="xxx" part -->
+    <xpath>/Defs/ThingDef[defName="VFEV_Apparel_GuardianHelmet"]</xpath>
+    <value>
+      <li Class="RaceSpecificApparel.RaceSpecific">
+        <races>
+          <!-- You were missing this races tag -->
+          <li>
+            <race>MinotaurRace</race>
+            <!-- This was spelled incorrectly. It has to correspond to your race def file -->
+            <customPath>Things/Pawn/Minotaur/Apparel/VFE_BrigandineHelmet/BrigandineHelmet</customPath>
+            <autoStyle>false</autoStyle>
+          </li>
+        </races>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <!-- This xpath is not the same as a texture path, it's wierd like that. Most of the time you will only have to change the defName="xxx" part -->
+    <xpath>/Defs/ThingDef[defName="VFEV_Apparel_GuardianHelmet"]</xpath>
+    <value>
+      <li Class="RaceSpecificApparel.RaceSpecific">
+        <races>
+          <!-- You were missing this races tag -->
+          <li>
+            <race>MinotaurRace</race>
+            <!-- This was spelled incorrectly. It has to correspond to your race def file -->
+            <customPath>Things/Pawn/Minotaur/Apparel/VFE_BrigandineHelmet/BrigandineHelmet</customPath>
+            <autoStyle>false</autoStyle>
+          </li>
+        </races>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <!-- This xpath is not the same as a texture path, it's wierd like that. Most of the time you will only have to change the defName="xxx" part -->
+    <xpath>/Defs/ThingDef[defName="VFEV_Apparel_LeatherHelmet"]</xpath>
+    <value>
+      <li Class="RaceSpecificApparel.RaceSpecific">
+        <races>
+          <!-- You were missing this races tag -->
+          <li>
+            <race>MinotaurRace</race>
+            <!-- This was spelled incorrectly. It has to correspond to your race def file -->
+            <customPath>Things/Pawn/Minotaur/Apparel/VFE_LeatherHelmet/LeatherHelmet</customPath>
+            <autoStyle>false</autoStyle>
+          </li>
+        </races>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <!-- This xpath is not the same as a texture path, it's wierd like that. Most of the time you will only have to change the defName="xxx" part -->
+    <xpath>/Defs/ThingDef[defName="VFEV_Apparel_RavagerHelmet"]</xpath>
+    <value>
+      <li Class="RaceSpecificApparel.RaceSpecific">
+        <races>
+          <!-- You were missing this races tag -->
+          <li>
+            <race>MinotaurRace</race>
+            <!-- This was spelled incorrectly. It has to correspond to your race def file -->
+            <customPath>Things/Pawn/Minotaur/Apparel/VFE_RavagerHelmet/RavagerHelmet</customPath>
+            <autoStyle>false</autoStyle>
+          </li>
+        </races>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <!-- This xpath is not the same as a texture path, it's wierd like that. Most of the time you will only have to change the defName="xxx" part -->
+    <xpath>/Defs/ThingDef[defName="VFEV_Apparel_CryptoLightHelmet"]</xpath>
+    <value>
+      <li Class="RaceSpecificApparel.RaceSpecific">
+        <races>
+          <!-- You were missing this races tag -->
+          <li>
+            <race>MinotaurRace</race>
+            <!-- This was spelled incorrectly. It has to correspond to your race def file -->
+            <customPath>Things/Pawn/Minotaur/Apparel/VFE_CryptoLightHelmet/CryptoLightHelmet</customPath>
+            <autoStyle>false</autoStyle>
+          </li>
+        </races>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <!-- This xpath is not the same as a texture path, it's wierd like that. Most of the time you will only have to change the defName="xxx" part -->
+    <xpath>/Defs/ThingDef[defName="VFEV_Apparel_CryptoHeavyHelmet"]</xpath>
+    <value>
+      <li Class="RaceSpecificApparel.RaceSpecific">
+        <races>
+          <!-- You were missing this races tag -->
+          <li>
+            <race>MinotaurRace</race>
+            <!-- This was spelled incorrectly. It has to correspond to your race def file -->
+            <customPath>Things/Pawn/Minotaur/Apparel/VFE_CryptoHeavyHelmet/CryptoHeavyHelmet</customPath>
+            <autoStyle>false</autoStyle>
+          </li>
+        </races>
+      </li>
+    </value>
+  </Operation>
+</Patch>

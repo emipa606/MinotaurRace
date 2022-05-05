@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef ParentName="PlayerFactionBase">
+    <defName>VFEV_Minotaur_PlayerClan</defName>
+    <label>New Minotaur Clan</label>
+    <description>A small minotaur clan.</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>member</pawnSingular>
+    <pawnsPlural>members</pawnsPlural>
+    <basicMemberKind>VFEV_Minotaur_Member</basicMemberKind>
+    <techLevel>Medieval</techLevel>
+    <backstoryCategories>
+      <li>Tribal</li>
+    </backstoryCategories>
+    <factionIconPath>World/WorldObjects/Expanding/MinoVikingsClan</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <playerInitialSettlementNameMaker>NamerSettlementViking</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionViking</factionNameMaker>
+    <settlementNameMaker>NamerSettlementViking</settlementNameMaker>
+    <geneticVariance>1</geneticVariance>
+    <allowedCultures>
+      <li>Vikings</li>
+    </allowedCultures>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+  </FactionDef>
+</Defs>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>VFEM_Minotaur_Subject</defName>
+    <label>subject</label>
+    <race>MinotaurRace</race>
+    <defaultFactionType>VFEM_Minotaur_PlayerKingdom</defaultFactionType>
+    <backstoryCategories>
+      <li>Tribal</li>
+    </backstoryCategories>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <apparelTags>
+      <li>MedievalBasic</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>200</min>
+      <max>200</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsMoney>
+      <min>50</min>
+      <max>50</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.02</techHediffsChance>
+    <initialResistanceRange>12~17</initialResistanceRange>
+  </PawnKindDef>
+</Defs>
