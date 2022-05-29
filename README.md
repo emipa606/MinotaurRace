@@ -45,9 +45,6 @@ AveryTheKitty: Support with eye injury addons for 1.3.
 Ogliss: Support with HAR stuff and unbreaking my mod mid-development through 1.3 becoming a thing.
 EpicGuru: (From the RimWorld Mod Market): C# code that allows gear to be patched for minotaur-specific textures.
 
-https://ko-fi.com/snowcraftminotaurs]![Image](https://i.imgur.com/nYlophp.png)
-
-
 ![Image](https://i.imgur.com/PwoNOj4.png)
 
 
@@ -58,5 +55,6 @@ https://ko-fi.com/snowcraftminotaurs]![Image](https://i.imgur.com/nYlophp.png)
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
+
 
 

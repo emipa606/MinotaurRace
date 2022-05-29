@@ -1,4 +1,7 @@
 # Changelog for MinotaurRace
 
+1.3.1 - Fixed the race-specific graphics for the samurai version of the prestige marine helmet
+
+
 1.3.0 - First publish
 
