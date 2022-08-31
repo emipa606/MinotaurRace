@@ -1,5 +1,8 @@
 # Changelog for MinotaurRace
 
+1.3.3 - Fixed the Royalty patch
+
+
 1.3.2 - Fixed a royalty specific patch
 
 

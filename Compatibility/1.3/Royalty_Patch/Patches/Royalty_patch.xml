@@ -25,8 +25,8 @@
             <li>
               <factionDef>CustomNPCRaceFaction</factionDef>
               <pawnKinds>
-                <li>Moo_Villager</li>
-                <li>Moo_Town_Guard</li>
+                <li>Minotaur_Villager</li>
+                <li>Minotaur_Town_Guard</li>
               </pawnKinds>
             </li>
           </value>
@@ -38,9 +38,9 @@
             <li>
               <factionDef>CustomNPCRaceFaction</factionDef>
               <pawnKinds>
-                <li>Moo_Mercenary_Gunner_Acidifier</li>
-                <li>Moo_Mercenary_Sniper_Acidifier</li>
-                <li>Moo_Mercenary_Heavy</li>
+                <li>Minotaur_Mercenary_Gunner_Acidifier</li>
+                <li>Minotaur_Mercenary_Sniper_Acidifier</li>
+                <li>Minotaur_Mercenary_Heavy</li>
               </pawnKinds>
             </li>
           </value>
