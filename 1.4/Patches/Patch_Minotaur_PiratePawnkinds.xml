@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <!-- Normal fights, ranged with melee mix-ins -->
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName = "Pirate"]/pawnGroupMakers/li[1]/options</xpath>
+        <value>
+          <Minotaur_Drifter>10</Minotaur_Drifter>
+          <Minotaur_Thrasher>3</Minotaur_Thrasher>
+          <Minotaur_Scavenger>10</Minotaur_Scavenger>
+          <Minotaur_Pirate>10</Minotaur_Pirate>
+          <Minotaur_Grenadier_EMP>0.25</Minotaur_Grenadier_EMP>
+          <Minotaur_Grenadier_Smoke>0.25</Minotaur_Grenadier_Smoke>
+          <Minotaur_Grenadier_Destructive>2</Minotaur_Grenadier_Destructive>
+          <Minotaur_Mercenary_Gunner>10</Minotaur_Mercenary_Gunner>
+          <Minotaur_Mercenary_Heavy>6</Minotaur_Mercenary_Heavy>
+          <Minotaur_Mercenary_Slasher>3</Minotaur_Mercenary_Slasher>
+          <Minotaur_Mercenary_Sniper>7</Minotaur_Mercenary_Sniper>
+          <Minotaur_Mercenary_Elite>10</Minotaur_Mercenary_Elite>
+          <MinotaurPirateBoss>5</MinotaurPirateBoss>
+        </value>
+      </li>
+      <!-- Normal fights, melee-only -->
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName = "Pirate"]/pawnGroupMakers/li[2]/options</xpath>
+        <value>
+          <Minotaur_Thrasher>10</Minotaur_Thrasher>
+          <Minotaur_Mercenary_Slasher>10</Minotaur_Mercenary_Slasher>
+          <MinotaurPirateBoss>5</MinotaurPirateBoss>
+        </value>
+      </li>
+      <!-- Normal fights, ranged only -->
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName = "Pirate"]/pawnGroupMakers/li[3]/options</xpath>
+        <value>
+          <Minotaur_Scavenger>10</Minotaur_Scavenger>
+          <Minotaur_Pirate>10</Minotaur_Pirate>
+          <Minotaur_Grenadier_EMP>0.25</Minotaur_Grenadier_EMP>
+          <Minotaur_Grenadier_Smoke>0.25</Minotaur_Grenadier_Smoke>
+          <Minotaur_Grenadier_Destructive>2</Minotaur_Grenadier_Destructive>
+          <Minotaur_Mercenary_Gunner>10</Minotaur_Mercenary_Gunner>
+          <Minotaur_Mercenary_Heavy>6</Minotaur_Mercenary_Heavy>
+          <Minotaur_Mercenary_Sniper>7</Minotaur_Mercenary_Sniper>
+          <Minotaur_Mercenary_Elite>10</Minotaur_Mercenary_Elite>
+          <MinotaurPirateBoss>5</MinotaurPirateBoss>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName = "Pirate"]/pawnGroupMakers/li[4]/options</xpath>
+        <!-- Normal fights, explosives with ranged mix-ins -->
+        <value>
+          <Minotaur_Grenadier_EMP>0.5</Minotaur_Grenadier_EMP>
+          <Minotaur_Grenadier_Smoke>0.5</Minotaur_Grenadier_Smoke>
+          <Minotaur_Grenadier_Destructive>10</Minotaur_Grenadier_Destructive>
+          <Minotaur_Mercenary_Gunner>1</Minotaur_Mercenary_Gunner>
+          <Minotaur_Mercenary_Heavy>10</Minotaur_Mercenary_Heavy>
+          <Minotaur_Mercenary_Elite>1</Minotaur_Mercenary_Elite>
+          <MinotaurPirateBoss>1</MinotaurPirateBoss>
+        </value>
+      </li>
+      <!-- Normal fights, snipers only -->
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName = "Pirate"]/pawnGroupMakers/li[5]/options</xpath>
+        <value>
+          <Minotaur_Mercenary_Sniper>10</Minotaur_Mercenary_Sniper>
+        </value>
+      </li>
+      <!-- Normal fights, drifters only (very rare) -->
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName = "Pirate"]/pawnGroupMakers/li[6]/options</xpath>
+        <value>
+          <Minotaur_Drifter>10</Minotaur_Drifter>
+        </value>
+      </li>
+      <!-- Base defense, mainly ranged with melee mix-ins -->
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/FactionDef[defName = "Pirate"]/pawnGroupMakers/li[7]/options</xpath>
+        <value>
+          <Minotaur_Thrasher>3</Minotaur_Thrasher>
+          <Minotaur_Pirate>10</Minotaur_Pirate>
+          <Minotaur_Grenadier_Destructive>2</Minotaur_Grenadier_Destructive>
+          <Minotaur_Mercenary_Slasher>3</Minotaur_Mercenary_Slasher>
+          <Minotaur_Mercenary_Sniper>10</Minotaur_Mercenary_Sniper>
+          <Minotaur_Mercenary_Gunner>10</Minotaur_Mercenary_Gunner>
+          <Minotaur_Mercenary_Elite>10</Minotaur_Mercenary_Elite>
+          <MinotaurPirateBoss>10</MinotaurPirateBoss>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+</Patch>

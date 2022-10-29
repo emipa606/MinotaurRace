@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef ParentName="MinotaurTribeBase">
+    <defName>MinotaurTribeCannibal</defName>
+    <label>cannibal minotaur tribe</label>
+    <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particularly vicious tribe are minotaurs, and believes eating the flesh of their enemies is a great honor.</description>
+    <canMakeRandomly>false</canMakeRandomly>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <colorSpectrum>
+      <li>(0.65, 0.28, 0)</li>
+      <li>(0.61, 0.45, 0.32)</li>
+    </colorSpectrum>
+    <factionIconPath>World/WorldObjects/Expanding/MinoCannibalTribe</factionIconPath>
+    <permanentEnemy>true</permanentEnemy>
+    <requiredMemes>
+      <li>Cannibal</li>
+    </requiredMemes>
+    <disallowedMemes>
+      <li>Nudism</li>
+      <li>Blindsight</li>
+      <li>AnimalPersonhood</li>
+    </disallowedMemes>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>63</configurationListOrderPriority>
+    <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+  </FactionDef>
+  <FactionDef ParentName="MinotaurTribeBase">
+    <defName>MinotaurNudistTribe</defName>
+    <label>nudist minotaur tribe</label>
+    <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe are minotaurs, and believes that covering one's body is wrong.</description>
+    <canMakeRandomly>false</canMakeRandomly>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <colorSpectrum>
+      <li>(0.76, 0.55, 0)</li>
+      <li>(0.76, 0.66, 0.35)</li>
+    </colorSpectrum>
+    <factionIconPath>World/WorldObjects/Expanding/MinoNudistTribe</factionIconPath>
+    <permanentEnemy>false</permanentEnemy>
+    <requiredMemes>
+      <li>Nudism</li>
+    </requiredMemes>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>64</configurationListOrderPriority>
+    <startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+    <allowedArrivalTemperatureRange>18~45</allowedArrivalTemperatureRange>
+    <minSettlementTemperatureChanceCurve>
+      <!-- Nudist setllements should try to appear in warm temperatures -->
+      <points>
+        <li>(17.9,  0.00001)</li>
+        <li>(18,    1)</li>
+        <li>(24,    1)</li>
+      </points>
+    </minSettlementTemperatureChanceCurve>
+  </FactionDef>
+</Defs>

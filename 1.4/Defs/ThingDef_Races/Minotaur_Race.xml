@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+    <defName>MinotaurRace</defName>
+    <label>minotaur</label>
+    <description>Minotaurs are a genetically-engineered xenohuman species who originate from an unknown Glitterworld. Beyond their extremely bovid appearance, they are largely similar to baseline humans.</description>
+    <statBases>
+      <MarketValue>1950</MarketValue>
+      <MoveSpeed>4.6</MoveSpeed>
+      <ComfyTemperatureMin>10</ComfyTemperatureMin>
+      <ComfyTemperatureMax>20</ComfyTemperatureMax>
+      <LeatherAmount>50</LeatherAmount>
+      <RoyalFavorValue>3</RoyalFavorValue>
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10.2</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10.2</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>8.2</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.07</chanceFactor>
+        <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+        <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>80</lifeExpectancy>
+      <leatherDef>Leather_Plain</leatherDef>
+      <nameCategory>HumanStandard</nameCategory>
+      <body>MinoBody</body>
+      <baseBodySize>1.2</baseBodySize>
+      <baseHealthScale>1.2</baseHealthScale>
+      <foodType>OmnivoreHuman</foodType>
+      <gestationPeriodDays>45</gestationPeriodDays>
+      <meatMarketValue>0.8</meatMarketValue>
+      <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0.02)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>HumanlikeChild</def>
+          <minAge>1.2</minAge>
+        </li>
+        <li MayRequire="Ludeon.RimWorld.Biotech">
+          <def>HumanlikePreTeenager</def>
+          <minAge>4</minAge>
+        </li>
+        <li>
+          <def>HumanlikeTeenager</def>
+          <minAge>13</minAge>
+        </li>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>18</minAge>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <soundMeleeDodge>Pawn_MeleeDodge</soundMeleeDodge>
+      <specialShadowData>
+        <volume>(0.3, 0.8, 0.4)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </specialShadowData>
+      <ageGenerationCurve>
+        <points>
+          <li>(14,0)</li>
+          <li>(16,100)</li>
+          <li>(50,100)</li>
+          <li>(60,30)</li>
+          <li>(70,18)</li>
+          <li>(80,10)</li>
+          <li>(90,3)</li>
+          <li>(100,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+        <li>Human</li>
+      </hediffGiverSets>
+    </race>
+    <recipes>
+      <li>ExciseCarcinoma</li>
+      <li>AdministerMechSerumHealer</li>
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>
+      <li>CureScaria</li>
+      <li MayRequire="Ludeon.RimWorld.Royalty">CureBloodRot</li>
+      <li MayRequire="Ludeon.RimWorld.Royalty">CureAbasia</li>
+    </recipes>
+    <alienRace>
+      <generalSettings>
+        <allowHumanBios>true</allowHumanBios>
+        <humanRecipeImport>true</humanRecipeImport>
+        <alienPartGenerator>
+          <headTypes>
+            <li>Minotaur_Female_Average_Normal</li>
+            <li>Minotaur_Female_Average_Pointy</li>
+            <li>Minotaur_Female_Average_Wide</li>
+            <li>Minotaur_Female_Narrow_Normal</li>
+            <li>Minotaur_Female_Narrow_Pointy</li>
+            <li>Minotaur_Female_Narrow_Wide</li>
+            <li>Minotaur_Male_Average_Normal</li>
+            <li>Minotaur_Male_Average_Pointy</li>
+            <li>Minotaur_Male_Average_Wide</li>
+            <li>Minotaur_Male_Narrow_Normal</li>
+            <li>Minotaur_Male_Narrow_Pointy</li>
+            <li>Minotaur_Male_Narrow_Wide</li>
+          </headTypes>
+          <bodyTypes Inherit="False">
+            <li>Hulk</li>
+            <li>Thin</li>
+            <li>Female</li>
+            <li>Male</li>
+          </bodyTypes>
+          <anchorReplacements>
+            <li>
+              <originalTag>RightEye</originalTag>
+              <originalGroup>Torso</originalGroup>
+              <replacement>
+                <rotation>South</rotation>
+                <tag>RightEye</tag>
+                <canMirror>false</canMirror>
+                <!-- <crownType>Average</crownType> -->
+                <offset>(-0.112,0,0.268)</offset>
+                <range>0</range>
+                <layer>Head</layer>
+                <debugColor>(1,1,1,1)</debugColor>
+              </replacement>
+              <offsets>
+                <south>
+                  <bodyTypes>
+                    <Male>(-0.112,0.268)</Male>
+                    <Female>(-0.112,0.268)</Female>
+                    <Thin>(-0.112,0.268)</Thin>
+                    <Hulk>(-0.112,0.268)</Hulk>
+                  </bodyTypes>
+                </south>
+              </offsets>
+            </li>
+            <li>
+              <originalTag>LeftEye</originalTag>
+              <originalGroup>Torso</originalGroup>
+              <replacement>
+                <rotation>South</rotation>
+                <tag>LeftEye</tag>
+                <canMirror>false</canMirror>
+                <!-- <crownType>Average</crownType> -->
+                <offset>(0.112,0,0.268)</offset>
+                <range>0</range>
+                <layer>Head</layer>
+                <debugColor>(0,0,0,1)</debugColor>
+              </replacement>
+              <offsets>
+                <south>
+                  <bodyTypes>
+                    <Male>(0.112,0.268)</Male>
+                    <Female>(0.110,0.268)</Female>
+                    <Thin>(0.112,0.268)</Thin>
+                    <Hulk>(0.112,0.268)</Hulk>
+                  </bodyTypes>
+                </south>
+              </offsets>
+            </li>
+            <li>
+              <originalTag>RightEye</originalTag>
+              <originalGroup>Torso</originalGroup>
+              <replacement>
+                <rotation>East</rotation>
+                <tag>RightEye</tag>
+                <canMirror>false</canMirror>
+                <!-- <crownType>Average</crownType> -->
+                <offset>(0.2,0,0.268)</offset>
+                <range>0</range>
+                <layer>Head</layer>
+                <debugColor>(1,1,1,1)</debugColor>
+              </replacement>
+              <offsets>
+                <east>
+                  <bodyTypes>
+                    <Male>(0.160,0.320)</Male>
+                    <Female>(0.215,0.320)</Female>
+                    <Thin>(0.210,0.320)</Thin>
+                    <Hulk>(0.210,0.320)</Hulk>
+                  </bodyTypes>
+                </east>
+              </offsets>
+            </li>
+            <li>
+              <originalTag>LeftEye</originalTag>
+              <originalGroup>Torso</originalGroup>
+              <replacement>
+                <rotation>West</rotation>
+                <tag>LeftEye</tag>
+                <canMirror>false</canMirror>
+                <!-- <crownType>Average</crownType> -->
+                <offset>(-0.2,0,0.268)</offset>
+                <range>0</range>
+                <layer>Head</layer>
+                <debugColor>(0,0,0,1)</debugColor>
+              </replacement>
+              <offsets>
+                <west>
+                  <bodyTypes>
+                    <Male>(-0.160,0.320)</Male>
+                    <Female>(-0.215,0.320)</Female>
+                    <Thin>(-0.210,0.320)</Thin>
+                    <Hulk>(-0.210,0.320)</Hulk>
+                  </bodyTypes>
+                </west>
+              </offsets>
+            </li>
+          </anchorReplacements>
+          <customDrawSize>(1.1, 1.1)</customDrawSize>
+          <colorChannels>
+            <li>
+              <name>skin</name>
+              <!-- main skin color -->
+              <first Class="ColorGenerator_Options">
+                <options>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(215, 215, 215, 255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(66, 66, 66, 255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(245, 245, 245, 255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(213, 143, 96, 255)</only>
+                  </li>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(121, 72, 38, 255)</only>
+                  </li>
+                </options>
+              </first>
+              <!-- sploch color - Currently unused. -->
+              <second Class="ColorGenerator_Options">
+                <options>
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(0.500, 1.000, 0.000, 1.000)</only>
+                  </li>
+                </options>
+              </second>
+            </li>
+            <li>
+              <name>hair</name>
+              <first Class="ColorGenerator_Options">
+                <options>
+                  <!-- black -->
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(0.2,0.2,0.2,1)</only>
+                  </li>
+                  <!-- brunette -->
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(0.25,0.2,0.15,1)</only>
+                  </li>
+                  <!-- brown -->
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(0.3,0.2,0.1,1)</only>
+                  </li>
+                  <!-- beige -->
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(0.35,0.23,0.13,1)</only>
+                  </li>
+                  <!-- blond -->
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(0.9,0.9,0.6,1)</only>
+                  </li>
+                  <!-- caramel -->
+                  <li>
+                    <weight>10</weight>
+                    <only>RGBA(0.75,0.6,0.35,1)</only>
+                  </li>
+                  <!-- redhead -->
+                  <li>
+                    <weight>1</weight>
+                    <only>RGBA(0.937,0.286,0.137,1)</only>
+                  </li>
+                </options>
+              </first>
+            </li>
+          </colorChannels>
+          <bodyAddons>
+            <li>
+              <path>Things/Pawn/Minotaur/Tails/Mino_Tail</path>
+              <bodyPart>Tail</bodyPart>
+              <shaderType>Transparent</shaderType>
+              <drawSize>1.1</drawSize>
+              <layerInvert>false</layerInvert>
+              <drawnInBed>false</drawnInBed>
+              <drawnDesiccated>false</drawnDesiccated>
+              <colorChannel>skin</colorChannel>
+              <defaultOffset>Tail</defaultOffset>
+              <offsets>
+                <south>
+                  <bodyTypes>
+                    <Male>(0.0,-0.0)</Male>
+                    <Female>(0.0,-0.0)</Female>
+                    <Hulk>(0.0,-0.0)</Hulk>
+                    <Thin>(0.0,-0.0)</Thin>
+                  </bodyTypes>
+                </south>
+                <north>
+                  <layerOffset>-0.4</layerOffset>
+                  <bodyTypes>
+                    <Male>(0.0,0.6)</Male>
+                    <Female>(0.0,0.6)</Female>
+                    <Hulk>(0.0,0.3)</Hulk>
+                    <Thin>(0.0,0.6)</Thin>
+                  </bodyTypes>
+                </north>
+                <east>
+                  <layerOffset>-0.13</layerOffset>
+                  <bodyTypes>
+                    <Male>(-0.5,0.25)</Male>
+                    <Female>(-0.45,0.25)</Female>
+                    <Hulk>(-0.35,0.15)</Hulk>
+                    <Thin>(-0.5,0.25)</Thin>
+                  </bodyTypes>
+                </east>
+              </offsets>
+            </li>
+            <li>
+              <path>Things/Pawn/Minotaur/Horns/Horn_Right</path>
+              <bodyPart>Horn</bodyPart>
+              <inFrontOfBody>false</inFrontOfBody>
+              <alignWithHead>true</alignWithHead>
+              <drawSize>1.1</drawSize>
+              <drawnInBed>true</drawnInBed>
+              <colorChannel>base</colorChannel>
+              <drawnDesiccated>true</drawnDesiccated>
+              <hediffGraphics>
+                <MissingBodyPart>Things/Pawn/Minotaur/Horns/BrokenOff/Horn_Right</MissingBodyPart>
+                <Crack>Things/Pawn/Minotaur/Horns/Cracked/Horn_Right</Crack>
+              </hediffGraphics>
+              <offsets>
+                <south>
+                  <layerOffset>-0.33</layerOffset>
+                  <headTypes>
+                    <Minotaur_Female_Average_Normal>(-0.01, 0.0)</Minotaur_Female_Average_Normal>
+                    <Minotaur_Male_Average_Normal>(-0.01, 0.0)</Minotaur_Male_Average_Normal>
+                    <Minotaur_Female_Average_Pointy>(-0.01, 0.0)</Minotaur_Female_Average_Pointy>
+                    <Minotaur_Male_Average_Pointy>(-0.01, 0.0)</Minotaur_Male_Average_Pointy>
+                    <Minotaur_Female_Average_Wide>(-0.01, 0.0)</Minotaur_Female_Average_Wide>
+                    <Minotaur_Male_Average_Wide>(-0.01, 0.0)</Minotaur_Male_Average_Wide>
+                    <Minotaur_Female_Narrow_Normal>(0.03, 0.0)</Minotaur_Female_Narrow_Normal>
+                    <Minotaur_Male_Narrow_Normal>(0.03, 0.0)</Minotaur_Male_Narrow_Normal>
+                    <Minotaur_Female_Narrow_Pointy>(0.03, 0.0)</Minotaur_Female_Narrow_Pointy>
+                    <Minotaur_Male_Narrow_Pointy>(0.03, 0.0)</Minotaur_Male_Narrow_Pointy>
+                    <Minotaur_Female_Narrow_Wide>(0.03, 0.0)</Minotaur_Female_Narrow_Wide>
+                    <Minotaur_Male_Narrow_Wide>(0.03, 0.0)</Minotaur_Male_Narrow_Wide>
+                  </headTypes>
+                </south>
+                <north>
+                  <layerOffset>-0.33</layerOffset>
+                  <headTypes>
+                    <Minotaur_Female_Average_Normal>(-0.01, 0.0)</Minotaur_Female_Average_Normal>
+                    <Minotaur_Male_Average_Normal>(-0.01, 0.0)</Minotaur_Male_Average_Normal>
+                    <Minotaur_Female_Average_Pointy>(-0.01, 0.0)</Minotaur_Female_Average_Pointy>
+                    <Minotaur_Male_Average_Pointy>(-0.01, 0.0)</Minotaur_Male_Average_Pointy>
+                    <Minotaur_Female_Average_Wide>(-0.01, 0.0)</Minotaur_Female_Average_Wide>
+                    <Minotaur_Male_Average_Wide>(-0.01, 0.0)</Minotaur_Male_Average_Wide>
+                    <Minotaur_Female_Narrow_Normal>(-0.03, 0.0)</Minotaur_Female_Narrow_Normal>
+                    <Minotaur_Male_Narrow_Normal>(-0.03, 0.0)</Minotaur_Male_Narrow_Normal>
+                    <Minotaur_Female_Narrow_Pointy>(-0.03, 0.0)</Minotaur_Female_Narrow_Pointy>
+                    <Minotaur_Male_Narrow_Pointy>(-0.03, 0.0)</Minotaur_Male_Narrow_Pointy>
+                    <Minotaur_Female_Narrow_Wide>(-0.03, 0.0)</Minotaur_Female_Narrow_Wide>
+                    <Minotaur_Male_Narrow_Wide>(-0.03, 0.0)</Minotaur_Male_Narrow_Wide>
+                  </headTypes>
+                </north>
+                <east>
+                  <layerOffset>-0.34</layerOffset>
+                  <headTypes>
+                    <Minotaur_Female_Average_Normal>(0.0, 0.0)</Minotaur_Female_Average_Normal>
+                    <Minotaur_Male_Average_Normal>(0.0, 0.0)</Minotaur_Male_Average_Normal>
+                    <Minotaur_Female_Average_Pointy>(0.0, 0.0)</Minotaur_Female_Average_Pointy>
+                    <Minotaur_Male_Average_Pointy>(0.0, 0.0)</Minotaur_Male_Average_Pointy>
+                    <Minotaur_Female_Average_Wide>(0.0, 0.0)</Minotaur_Female_Average_Wide>
+                    <Minotaur_Male_Average_Wide>(0.0, 0.0)</Minotaur_Male_Average_Wide>
+                    <Minotaur_Female_Narrow_Normal>(0.0, 0.0)</Minotaur_Female_Narrow_Normal>
+                    <Minotaur_Male_Narrow_Normal>(0.0, 0.0)</Minotaur_Male_Narrow_Normal>
+                    <Minotaur_Female_Narrow_Pointy>(0.0, 0.0)</Minotaur_Female_Narrow_Pointy>
+                    <Minotaur_Male_Narrow_Pointy>(0.0, 0.0)</Minotaur_Male_Narrow_Pointy>
+                    <Minotaur_Female_Narrow_Wide>(0.0, 0.0)</Minotaur_Female_Narrow_Wide>
+                    <Minotaur_Male_Narrow_Wide>(0.0, 0.0)</Minotaur_Male_Narrow_Wide>
+                  </headTypes>
+                </east>
+              </offsets>
+            </li>
+            <li>
+              <path>Things/Pawn/Minotaur/Horns/Horn_Left</path>
+              <bodyPart>Horn</bodyPart>
+              <inFrontOfBody>false</inFrontOfBody>
+              <alignWithHead>true</alignWithHead>
+              <linkVariantIndexWithPrevious>true</linkVariantIndexWithPrevious>
+              <drawSize>1.1</drawSize>
+              <drawnInBed>true</drawnInBed>
+              <colorChannel>base</colorChannel>
+              <drawnDesiccated>true</drawnDesiccated>
+              <hediffGraphics>
+                <MissingBodyPart>Things/Pawn/Minotaur/Horns/BrokenOff/Horn_Left</MissingBodyPart>
+                <Crack>Things/Pawn/Minotaur/Horns/Cracked/Horn_Left</Crack>
+              </hediffGraphics>
+              <offsets>
+                <south>
+                  <layerOffset>-0.33</layerOffset>
+                  <headTypes>
+                    <Minotaur_Female_Average_Normal>(-0.01, 0.0)</Minotaur_Female_Average_Normal>
+                    <Minotaur_Male_Average_Normal>(-0.01, 0.0)</Minotaur_Male_Average_Normal>
+                    <Minotaur_Female_Average_Pointy>(-0.01, 0.0)</Minotaur_Female_Average_Pointy>
+                    <Minotaur_Male_Average_Pointy>(-0.01, 0.0)</Minotaur_Male_Average_Pointy>
+                    <Minotaur_Female_Average_Wide>(-0.01, 0.0)</Minotaur_Female_Average_Wide>
+                    <Minotaur_Male_Average_Wide>(-0.01, 0.0)</Minotaur_Male_Average_Wide>
+                    <Minotaur_Female_Narrow_Normal>(0.03, 0.0)</Minotaur_Female_Narrow_Normal>
+                    <Minotaur_Male_Narrow_Normal>(0.03, 0.0)</Minotaur_Male_Narrow_Normal>
+                    <Minotaur_Female_Narrow_Pointy>(0.03, 0.0)</Minotaur_Female_Narrow_Pointy>
+                    <Minotaur_Male_Narrow_Pointy>(0.03, 0.0)</Minotaur_Male_Narrow_Pointy>
+                    <Minotaur_Female_Narrow_Wide>(0.03, 0.0)</Minotaur_Female_Narrow_Wide>
+                    <Minotaur_Male_Narrow_Wide>(0.03, 0.0)</Minotaur_Male_Narrow_Wide>
+                  </headTypes>
+                </south>
+                <north>
+                  <layerOffset>-0.33</layerOffset>
+                  <headTypes>
+                    <Minotaur_Female_Average_Normal>(-0.01, 0.0)</Minotaur_Female_Average_Normal>
+                    <Minotaur_Male_Average_Normal>(-0.01, 0.0)</Minotaur_Male_Average_Normal>
+                    <Minotaur_Female_Average_Pointy>(-0.01, 0.0)</Minotaur_Female_Average_Pointy>
+                    <Minotaur_Male_Average_Pointy>(-0.01, 0.0)</Minotaur_Male_Average_Pointy>
+                    <Minotaur_Female_Average_Wide>(-0.01, 0.0)</Minotaur_Female_Average_Wide>
+                    <Minotaur_Male_Average_Wide>(-0.01, 0.0)</Minotaur_Male_Average_Wide>
+                    <Minotaur_Female_Narrow_Normal>(0.03, 0.0)</Minotaur_Female_Narrow_Normal>
+                    <Minotaur_Male_Narrow_Normal>(0.03, 0.0)</Minotaur_Male_Narrow_Normal>
+                    <Minotaur_Female_Narrow_Pointy>(0.03, 0.0)</Minotaur_Female_Narrow_Pointy>
+                    <Minotaur_Male_Narrow_Pointy>(0.03, 0.0)</Minotaur_Male_Narrow_Pointy>
+                    <Minotaur_Female_Narrow_Wide>(0.03, 0.0)</Minotaur_Female_Narrow_Wide>
+                    <Minotaur_Male_Narrow_Wide>(0.03, 0.0)</Minotaur_Male_Narrow_Wide>
+                  </headTypes>
+                </north>
+                <east>
+                  <layerOffset>-0.34</layerOffset>
+                  <headTypes>
+                    <Minotaur_Female_Average_Normal>(0.0, 0.0)</Minotaur_Female_Average_Normal>
+                    <Minotaur_Male_Average_Normal>(0.0, 0.0)</Minotaur_Male_Average_Normal>
+                    <Minotaur_Female_Average_Pointy>(0.0, 0.0)</Minotaur_Female_Average_Pointy>
+                    <Minotaur_Male_Average_Pointy>(0.0, 0.0)</Minotaur_Male_Average_Pointy>
+                    <Minotaur_Female_Average_Wide>(0.0, 0.0)</Minotaur_Female_Average_Wide>
+                    <Minotaur_Male_Average_Wide>(0.0, 0.0)</Minotaur_Male_Average_Wide>
+                    <Minotaur_Female_Narrow_Normal>(0.0, 0.0)</Minotaur_Female_Narrow_Normal>
+                    <Minotaur_Male_Narrow_Normal>(0.0, 0.0)</Minotaur_Male_Narrow_Normal>
+                    <Minotaur_Female_Narrow_Pointy>(0.0, 0.0)</Minotaur_Female_Narrow_Pointy>
+                    <Minotaur_Male_Narrow_Pointy>(0.0, 0.0)</Minotaur_Male_Narrow_Pointy>
+                    <Minotaur_Female_Narrow_Wide>(0.0, 0.0)</Minotaur_Female_Narrow_Wide>
+                    <Minotaur_Male_Narrow_Wide>(0.0, 0.0)</Minotaur_Male_Narrow_Wide>
+                  </headTypes>
+                </east>
+              </offsets>
+            </li>
+            <li>
+              <path>Things/Pawn/Minotaur/Ears/Mino_Ear_Right</path>
+              <bodyPart>Ear</bodyPart>
+              <inFrontOfBody>false</inFrontOfBody>
+              <alignWithHead>true</alignWithHead>
+              <drawSize>1.1</drawSize>
+              <drawnInBed>true</drawnInBed>
+              <drawnDesiccated>false</drawnDesiccated>
+              <hiddenUnderApparelFor>
+                <li>FullHead</li>
+              </hiddenUnderApparelFor>
+              <offsets>
+                <south>
+                  <layerOffset>-0.34</layerOffset>
+                  <headTypes>
+                    <Minotaur_Female_Average_Normal>(0.0, -0.1)</Minotaur_Female_Average_Normal>
+                    <Minotaur_Male_Average_Normal>(0.0, -0.1)</Minotaur_Male_Average_Normal>
+                    <Minotaur_Female_Average_Pointy>(0.0, -0.1)</Minotaur_Female_Average_Pointy>
+                    <Minotaur_Male_Average_Pointy>(0.0, -0.1)</Minotaur_Male_Average_Pointy>
+                    <Minotaur_Female_Average_Wide>(0.0, -0.1)</Minotaur_Female_Average_Wide>
+                    <Minotaur_Male_Average_Wide>(0.0, -0.1)</Minotaur_Male_Average_Wide>
+                    <Minotaur_Female_Narrow_Normal>(0.03, -0.1)</Minotaur_Female_Narrow_Normal>
+                    <Minotaur_Male_Narrow_Normal>(0.03, -0.1)</Minotaur_Male_Narrow_Normal>
+                    <Minotaur_Female_Narrow_Pointy>(0.03, -0.1)</Minotaur_Female_Narrow_Pointy>
+                    <Minotaur_Male_Narrow_Pointy>(0.03, -0.1)</Minotaur_Male_Narrow_Pointy>
+                    <Minotaur_Female_Narrow_Wide>(0.03, -0.1)</Minotaur_Female_Narrow_Wide>
+                    <Minotaur_Male_Narrow_Wide>(0.03, -0.1)</Minotaur_Male_Narrow_Wide>
+                  </headTypes>
+                </south>
+                <north>
+                  <layerOffset>-0.34</layerOffset>
+                  <headTypes>
+                    <Minotaur_Female_Average_Normal>(0.0, -0.1)</Minotaur_Female_Average_Normal>
+                    <Minotaur_Male_Average_Normal>(0.0, -0.1)</Minotaur_Male_Average_Normal>
+                    <Minotaur_Female_Average_Pointy>(0.0, -0.1)</Minotaur_Female_Average_Pointy>
+                    <Minotaur_Male_Average_Pointy>(0.0, -0.1)</Minotaur_Male_Average_Pointy>
+                    <Minotaur_Female_Average_Wide>(0.0, -0.1)</Minotaur_Female_Average_Wide>
+                    <Minotaur_Male_Average_Wide>(0.0, -0.1)</Minotaur_Male_Average_Wide>
+                    <Minotaur_Female_Narrow_Normal>(0.03, -0.1)</Minotaur_Female_Narrow_Normal>
+                    <Minotaur_Male_Narrow_Normal>(0.03, -0.1)</Minotaur_Male_Narrow_Normal>
+                    <Minotaur_Female_Narrow_Pointy>(0.03, -0.1)</Minotaur_Female_Narrow_Pointy>
+                    <Minotaur_Male_Narrow_Pointy>(0.03, -0.1)</Minotaur_Male_Narrow_Pointy>
+                    <Minotaur_Female_Narrow_Wide>(0.03, -0.1)</Minotaur_Female_Narrow_Wide>
+                    <Minotaur_Male_Narrow_Wide>(0.03, -0.1)</Minotaur_Male_Narrow_Wide>
+                  </headTypes>
+                </north>
+              </offsets>
+            </li>
+            <li>
+              <path>Things/Pawn/Minotaur/Ears/Mino_Ear_Left</path>
+              <bodyPart>Ear</bodyPart>
+              <inFrontOfBody>false</inFrontOfBody>
+              <alignWithHead>true</alignWithHead>
+              <defaultOffset>Center</defaultOffset>
+              <drawSize>1.1</drawSize>
+              <drawnInBed>true</drawnInBed>
+              <drawnDesiccated>false</drawnDesiccated>
+              <hiddenUnderApparelFor>
+                <li>FullHead</li>
+              </hiddenUnderApparelFor>
+              <offsets>
+                <south>
+                  <layerOffset>-0.34</layerOffset>
+                  <headTypes>
+                    <Minotaur_Female_Average_Normal>(0.0, -0.1)</Minotaur_Female_Average_Normal>
+                    <Minotaur_Male_Average_Normal>(0.0, -0.1)</Minotaur_Male_Average_Normal>
+                    <Minotaur_Female_Average_Pointy>(0.0, -0.1)</Minotaur_Female_Average_Pointy>
+                    <Minotaur_Male_Average_Pointy>(0.0, -0.1)</Minotaur_Male_Average_Pointy>
+                    <Minotaur_Female_Average_Wide>(0.0, -0.1)</Minotaur_Female_Average_Wide>
+                    <Minotaur_Male_Average_Wide>(0.0, -0.1)</Minotaur_Male_Average_Wide>
+                    <Minotaur_Female_Narrow_Normal>(-0.03, -0.1)</Minotaur_Female_Narrow_Normal>
+                    <Minotaur_Male_Narrow_Normal>(-0.03, -0.1)</Minotaur_Male_Narrow_Normal>
+                    <Minotaur_Female_Narrow_Pointy>(-0.03, -0.1)</Minotaur_Female_Narrow_Pointy>
+                    <Minotaur_Male_Narrow_Pointy>(-0.03, -0.1)</Minotaur_Male_Narrow_Pointy>
+                    <Minotaur_Female_Narrow_Wide>(-0.03, -0.1)</Minotaur_Female_Narrow_Wide>
+                    <Minotaur_Male_Narrow_Wide>(-0.03, -0.1)</Minotaur_Male_Narrow_Wide>
+                  </headTypes>
+                </south>
+                <north>
+                  <layerOffset>-0.34</layerOffset>
+                  <headTypes>
+                    <Minotaur_Female_Average_Normal>(0.0, -0.1)</Minotaur_Female_Average_Normal>
+                    <Minotaur_Male_Average_Normal>(0.0, -0.1)</Minotaur_Male_Average_Normal>
+                    <Minotaur_Female_Average_Pointy>(0.0, -0.1)</Minotaur_Female_Average_Pointy>
+                    <Minotaur_Male_Average_Pointy>(0.0, -0.1)</Minotaur_Male_Average_Pointy>
+                    <Minotaur_Female_Average_Wide>(0.0, -0.1)</Minotaur_Female_Average_Wide>
+                    <Minotaur_Male_Average_Wide>(0.0, -0.1)</Minotaur_Male_Average_Wide>
+                    <Minotaur_Female_Narrow_Normal>(0.03, -0.1)</Minotaur_Female_Narrow_Normal>
+                    <Minotaur_Male_Narrow_Normal>(0.03, -0.1)</Minotaur_Male_Narrow_Normal>
+                    <Minotaur_Female_Narrow_Pointy>(0.03, -0.1)</Minotaur_Female_Narrow_Pointy>
+                    <Minotaur_Male_Narrow_Pointy>(0.03, -0.1)</Minotaur_Male_Narrow_Pointy>
+                    <Minotaur_Female_Narrow_Wide>(0.03, -0.1)</Minotaur_Female_Narrow_Wide>
+                    <Minotaur_Male_Narrow_Wide>(0.03, -0.1)</Minotaur_Male_Narrow_Wide>
+                  </headTypes>
+                </north>
+                <east>
+                  <layerOffset>-0.35</layerOffset>
+                  <headTypes>
+                    <Minotaur_Female_Average_Normal>(0.0, -0.1)</Minotaur_Female_Average_Normal>
+                    <Minotaur_Male_Average_Normal>(0.0, -0.1)</Minotaur_Male_Average_Normal>
+                    <Minotaur_Female_Average_Pointy>(0.0, -0.1)</Minotaur_Female_Average_Pointy>
+                    <Minotaur_Male_Average_Pointy>(0.0, -0.1)</Minotaur_Male_Average_Pointy>
+                    <Minotaur_Female_Average_Wide>(0.0, -0.1)</Minotaur_Female_Average_Wide>
+                    <Minotaur_Male_Average_Wide>(0.0, -0.1)</Minotaur_Male_Average_Wide>
+                    <Minotaur_Female_Narrow_Normal>(0.03, -0.1)</Minotaur_Female_Narrow_Normal>
+                    <Minotaur_Male_Narrow_Normal>(0.03, -0.1)</Minotaur_Male_Narrow_Normal>
+                    <Minotaur_Female_Narrow_Pointy>(0.03, -0.1)</Minotaur_Female_Narrow_Pointy>
+                    <Minotaur_Male_Narrow_Pointy>(0.03, -0.1)</Minotaur_Male_Narrow_Pointy>
+                    <Minotaur_Female_Narrow_Wide>(0.03, -0.1)</Minotaur_Female_Narrow_Wide>
+                    <Minotaur_Male_Narrow_Wide>(0.03, -0.1)</Minotaur_Male_Narrow_Wide>
+                  </headTypes>
+                </east>
+              </offsets>
+            </li>
+          </bodyAddons>
+        </alienPartGenerator>
+      </generalSettings>
+      <graphicPaths>
+        <body>Things/Pawn/Minotaur/Body/</body>
+        <head>Things/Pawn/Minotaur/Heads/</head>
+        <skull>Things/Pawn/Minotaur/Skull/Mino_skull</skull>
+        <skinShader>Cutout</skinShader>
+      </graphicPaths>
+      <styleSettings>
+        <li>
+          <key>BeardDef</key>
+          <value>
+            <styleTagsOverride>
+              <li>NoBeard</li>
+            </styleTagsOverride>
+          </value>
+        </li>
+        <li>
+          <key>TattooDef</key>
+          <value>
+            <hasStyle>true</hasStyle>
+            <styleTagsOverride>
+              <li>TattooBodyTribal</li>
+              <li>MinoTattooFaceTribal</li>
+              <li>TattooBodyPunk</li>
+              <li>MinoTattooFacePunk</li>
+              <li>TattooBodyCannibal</li>
+              <li>MinoTattooFaceCannibal</li>
+            </styleTagsOverride>
+          </value>
+        </li>
+      </styleSettings>
+    </alienRace>
+  </AlienRace.ThingDef_AlienRace>
+  <AlienRace.RaceSettings>
+    <defName>MinotaurRaceSettings</defName>
+    <pawnKindSettings>
+      <alienslavekinds>
+        <li>
+          <kindDefs>
+            <li>Minotaur_Slave</li>
+          </kindDefs>
+          <chance>10.0</chance>
+        </li>
+      </alienslavekinds>
+      <alienrefugeekinds>
+        <li>
+          <kindDefs>
+            <li>Minotaur_Villager</li>
+          </kindDefs>
+          <chance>10.0</chance>
+        </li>
+      </alienrefugeekinds>
+    </pawnKindSettings>
+  </AlienRace.RaceSettings>
+</Defs>

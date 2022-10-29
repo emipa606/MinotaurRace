@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[defName = "Empire"]/permanentEnemyToEveryoneExcept</xpath>
+    <value>
+      <li>MinotaurPlayerColony</li>
+      <li>MinotaurPlayerTribe</li>
+      <li>MinotaurTribeCivil</li>
+      <li>MinotaurOutlanderCivil</li>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.MedievalModule">VFEM_Minotaur_PlayerKingdom</li>
+      <li MayRequire="OskarPotocki.VanillaFactionsExpanded.SettlersModule">VFES_Minotaur_PlayerSettlement</li>
+      <li MayRequire="OskarPotocki.VFE.Vikings">VFEV_Minotaur_PlayerClan</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Royalty</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <!-- Guests -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/QuestScriptDef/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_IsSet"]/node[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices</xpath>
+          <value>
+            <li>
+              <factionDef>CustomNPCRaceFaction</factionDef>
+              <pawnKinds>
+                <li>Minotaur_Villager</li>
+                <li>Minotaur_Town_Guard</li>
+              </pawnKinds>
+            </li>
+          </value>
+        </li>
+        <!-- Mercenaries -->
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/QuestScriptDef/root[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_GetRandomPawnKindForFaction"]/choices</xpath>
+          <value>
+            <li>
+              <factionDef>CustomNPCRaceFaction</factionDef>
+              <pawnKinds>
+                <li>Minotaur_Mercenary_Gunner_Acidifier</li>
+                <li>Minotaur_Mercenary_Sniper_Acidifier</li>
+                <li>Minotaur_Mercenary_Heavy</li>
+              </pawnKinds>
+            </li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

@@ -5,8 +5,8 @@ namespace RaceSpecificApparel;
 
 public class RaceSpecific : DefModExtension
 {
-    private Dictionary<string, RaceSpecificData> dataMap;
     private readonly List<RaceSpecificData> races = new List<RaceSpecificData>();
+    private Dictionary<string, RaceSpecificData> dataMap;
 
     public RaceSpecificData TryGetRaceData(string raceDefName)
     {
@@ -39,11 +39,6 @@ public class RaceSpecific : DefModExtension
             }
         }
 
-        if (raceDefName == null)
-        {
-            return null;
-        }
-
-        return dataMap.TryGetValue(raceDefName);
+        return raceDefName == null ? null : dataMap.TryGetValue(raceDefName);
     }
 }

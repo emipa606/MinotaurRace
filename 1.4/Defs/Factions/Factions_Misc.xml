@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef ParentName="FactionBase" Name="MinotaurOutlanderFactionBase" Abstract="True">
+    <pawnSingular>outlander</pawnSingular>
+    <pawnsPlural>outlanders</pawnsPlural>
+    <categoryTag>Outlander</categoryTag>
+    <listOrderPriority>30</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>prime councilor</leaderTitle>
+    <factionIconPath>World/WorldObjects/Expanding/MinoTown</factionIconPath>
+    <techLevel>Industrial</techLevel>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <allowedCultures>
+      <li>Rustican</li>
+    </allowedCultures>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+    </disallowedMemes>
+    <structureMemeWeights>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistAbstract>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+      <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginChristian>
+      <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginIslamic>
+      <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginHindu>
+      <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginBuddhist>
+    </structureMemeWeights>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>0.95</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.05</commonality>
+      </li>
+    </backstoryFilters>
+    <caravanTraderKinds>
+      <li>Caravan_Outlander_BulkGoods</li>
+      <li>Caravan_Outlander_CombatSupplier</li>
+      <li>Caravan_Outlander_Exotic</li>
+      <li>Caravan_Outlander_PirateMerchant</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Outlander_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Outlander_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+    <raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, standard mix -->
+        <kindDef>Combat</kindDef>
+        <options>
+          <Minotaur_Villager>5</Minotaur_Villager>
+          <Minotaur_Town_Guard>10</Minotaur_Town_Guard>
+          <Minotaur_Grenadier_Destructive>1.5</Minotaur_Grenadier_Destructive>
+          <Minotaur_Mercenary_Slasher>7</Minotaur_Mercenary_Slasher>
+          <Minotaur_Mercenary_Gunner>10</Minotaur_Mercenary_Gunner>
+          <Minotaur_Mercenary_Elite>10</Minotaur_Mercenary_Elite>
+          <Minotaur_Town_Councilman>10</Minotaur_Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <Minotaur_Villager>20</Minotaur_Villager>
+          <Minotaur_Town_Guard>10</Minotaur_Town_Guard>
+          <Minotaur_Town_Councilman>10</Minotaur_Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <Minotaur_Town_Trader>1</Minotaur_Town_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+          <Minotaur_Villager>3</Minotaur_Villager>
+          <Minotaur_Town_Guard>10</Minotaur_Town_Guard>
+          <Minotaur_Grenadier_Destructive>1.5</Minotaur_Grenadier_Destructive>
+          <Minotaur_Mercenary_Slasher>7</Minotaur_Mercenary_Slasher>
+          <Minotaur_Mercenary_Gunner>10</Minotaur_Mercenary_Gunner>
+          <Minotaur_Mercenary_Elite>10</Minotaur_Mercenary_Elite>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Minotaur_Villager>10</Minotaur_Villager>
+          <Minotaur_Town_Guard>10</Minotaur_Town_Guard>
+          <Minotaur_Grenadier_Destructive>1.5</Minotaur_Grenadier_Destructive>
+          <Minotaur_Mercenary_Slasher>7</Minotaur_Mercenary_Slasher>
+          <Minotaur_Mercenary_Gunner>10</Minotaur_Mercenary_Gunner>
+          <Minotaur_Mercenary_Elite>10</Minotaur_Mercenary_Elite>
+          <Minotaur_Town_Councilman>10</Minotaur_Town_Councilman>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Minotaur_Miner>1</Minotaur_Miner>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Minotaur_Hunter>1</Minotaur_Hunter>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Minotaur_Logger>1</Minotaur_Logger>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Minotaur_Farmer>1</Minotaur_Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+  </FactionDef>
+  <FactionDef ParentName="MinotaurOutlanderFactionBase">
+    <defName>MinotaurOutlanderCivil</defName>
+    <label>civil outlander union</label>
+    <description>These people have lived here for decades or centuries, and have lost most of the technology that brought them to this world. They usually work with simple machinery and defend themselves with advanced gunpowder weapons.\n\nThey are concerned with the practical matters of trade, trust, and survival.\n\nThis particular group is comprised of minotaurs, and holds civil behavior in high regard.</description>
+    <colorSpectrum>
+      <li>(0.35, 0.30, 0.60)</li>
+      <li>(0.45, 0.40, 0.90)</li>
+    </colorSpectrum>
+    <classicIdeo>true</classicIdeo>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>10</configurationListOrderPriority>
+  </FactionDef>
+  <FactionDef ParentName="MinotaurOutlanderFactionBase">
+    <defName>MinotaurOutlanderRough</defName>
+    <label>rough outlander union</label>
+    <description>These people have lived here for decades or centuries, and have lost most of the technology that brought them to this world. They usually work with simple machinery and defend themselves with advanced gunpowder weapons.\n\nThey are concerned with the practical matters of trade, trust, and survival.\n\nThis particular group is comprised of minotaurs, and has a streak of barbarity in them.</description>
+    <colorSpectrum>
+      <li>(0, 0.4, 0.94)</li>
+      <li>(0.64, 0.8, 1)</li>
+    </colorSpectrum>
+    <factionIconPath>World/WorldObjects/Expanding/MinoTownRough</factionIconPath>
+    <naturalEnemy>true</naturalEnemy>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+    </requiredMemes>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>20</configurationListOrderPriority>
+  </FactionDef>
+  <!-- Tribal -->
+  <FactionDef ParentName="FactionBase" Name="MinotaurTribeBase" Abstract="True">
+    <pawnSingular>tribesman</pawnSingular>
+    <pawnsPlural>tribespeople</pawnsPlural>
+    <categoryTag>Tribal</categoryTag>
+    <listOrderPriority>20</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canStageAttacks>true</canStageAttacks>
+    <factionIconPath>World/WorldObjects/Expanding/MinoVillage</factionIconPath>
+    <melaninRange>0.0~0.2</melaninRange>
+    <techLevel>Neolithic</techLevel>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <allowedCultures>
+      <li>Corunan</li>
+    </allowedCultures>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+    </disallowedMemes>
+    <disallowedPrecepts>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Male_CoveringAnythingButGroinDisapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+    </disallowedPrecepts>
+    <structureMemeWeights>
+      <Structure_Animist MayRequire="Ludeon.RimWorld.Ideology">4</Structure_Animist>
+      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistAbstract>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+      <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginChristian>
+      <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginIslamic>
+      <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginHindu>
+      <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginBuddhist>
+    </structureMemeWeights>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <leaderTitle>chief</leaderTitle>
+    <caravanTraderKinds>
+      <li>Caravan_Neolithic_BulkGoods</li>
+      <li>Caravan_Neolithic_WarMerchant</li>
+      <li>Caravan_Neolithic_Slaver</li>
+      <li>Caravan_Neolithic_ShamanMerchant</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Neolithic_Standard</li>
+    </visitorTraderKinds>
+    <baseTraderKinds>
+      <li>Base_Neolithic_Standard</li>
+    </baseTraderKinds>
+    <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+    <raidCommonalityFromPointsCurve>
+      <points>
+        <li>(0, 1)</li>
+        <!--Constant 1 at all points levels-->
+      </points>
+    </raidCommonalityFromPointsCurve>
+    <raidLootMaker>TribeRaidLootMaker</raidLootMaker>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(800, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, ranged with melee mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <Minotaur_Tribal_Penitent>5</Minotaur_Tribal_Penitent>
+          <Minotaur_Tribal_Warrior>5</Minotaur_Tribal_Warrior>
+          <Minotaur_Tribal_Archer>10</Minotaur_Tribal_Archer>
+          <Minotaur_Tribal_Hunter>10</Minotaur_Tribal_Hunter>
+          <Minotaur_Tribal_HeavyArcher>10</Minotaur_Tribal_HeavyArcher>
+          <Minotaur_Tribal_Berserker>5</Minotaur_Tribal_Berserker>
+          <Minotaur_Tribal_ChiefRanged>3</Minotaur_Tribal_ChiefRanged>
+          <Minotaur_Tribal_ChiefMelee>1.5</Minotaur_Tribal_ChiefMelee>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, ranged only -->
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <Minotaur_Tribal_Archer>10</Minotaur_Tribal_Archer>
+          <Minotaur_Tribal_Hunter>10</Minotaur_Tribal_Hunter>
+          <Minotaur_Tribal_HeavyArcher>10</Minotaur_Tribal_HeavyArcher>
+          <Minotaur_Tribal_ChiefRanged>5</Minotaur_Tribal_ChiefRanged>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, melee only -->
+        <kindDef>Combat</kindDef>
+        <commonality>60</commonality>
+        <options>
+          <Minotaur_Tribal_Penitent>10</Minotaur_Tribal_Penitent>
+          <Minotaur_Tribal_Warrior>10</Minotaur_Tribal_Warrior>
+          <Minotaur_Tribal_Berserker>10</Minotaur_Tribal_Berserker>
+          <Minotaur_Tribal_ChiefMelee>5</Minotaur_Tribal_ChiefMelee>
+        </options>
+      </li>
+      <li>
+        <!-- breach-capable fights, breachers plus ranged with melee mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>5</commonality>
+        <options>
+          <Minotaur_Tribal_Breacher>5</Minotaur_Tribal_Breacher>
+          <Minotaur_Tribal_Penitent>5</Minotaur_Tribal_Penitent>
+          <Minotaur_Tribal_Warrior>5</Minotaur_Tribal_Warrior>
+          <Minotaur_Tribal_Archer>10</Minotaur_Tribal_Archer>
+          <Minotaur_Tribal_Hunter>10</Minotaur_Tribal_Hunter>
+          <Minotaur_Tribal_HeavyArcher>10</Minotaur_Tribal_HeavyArcher>
+          <Minotaur_Tribal_Berserker>5</Minotaur_Tribal_Berserker>
+          <Minotaur_Tribal_ChiefRanged>3</Minotaur_Tribal_ChiefRanged>
+          <Minotaur_Tribal_ChiefMelee>1.5</Minotaur_Tribal_ChiefMelee>
+        </options>
+      </li>
+      <li>
+        <!-- Peaceful -->
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <Minotaur_Tribal_Warrior>20</Minotaur_Tribal_Warrior>
+          <Minotaur_Tribal_Archer>10</Minotaur_Tribal_Archer>
+          <Minotaur_Tribal_Hunter>10</Minotaur_Tribal_Hunter>
+          <Minotaur_Tribal_HeavyArcher>10</Minotaur_Tribal_HeavyArcher>
+          <Minotaur_Tribal_Berserker>5</Minotaur_Tribal_Berserker>
+          <Minotaur_Tribal_ChiefRanged>3</Minotaur_Tribal_ChiefRanged>
+          <Minotaur_Tribal_ChiefMelee>1.5</Minotaur_Tribal_ChiefMelee>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <Minotaur_Tribal_Trader>1</Minotaur_Tribal_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2.5</Alpaca>
+          <Elephant>2</Elephant>
+        </carriers>
+        <guards>
+          <Minotaur_Tribal_Warrior>7</Minotaur_Tribal_Warrior>
+          <Minotaur_Tribal_Archer>10</Minotaur_Tribal_Archer>
+          <Minotaur_Tribal_Hunter>10</Minotaur_Tribal_Hunter>
+          <Minotaur_Tribal_HeavyArcher>10</Minotaur_Tribal_HeavyArcher>
+          <Minotaur_Tribal_Berserker>7</Minotaur_Tribal_Berserker>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Minotaur_Tribal_Warrior>7</Minotaur_Tribal_Warrior>
+          <Minotaur_Tribal_Archer>10</Minotaur_Tribal_Archer>
+          <Minotaur_Tribal_Hunter>10</Minotaur_Tribal_Hunter>
+          <Minotaur_Tribal_HeavyArcher>10</Minotaur_Tribal_HeavyArcher>
+          <Minotaur_Tribal_Berserker>7</Minotaur_Tribal_Berserker>
+          <Minotaur_Tribal_ChiefRanged>10</Minotaur_Tribal_ChiefRanged>
+        </options>
+      </li>
+      <li>
+        <kindDef>Settlement_RangedOnly</kindDef>
+        <options>
+          <Minotaur_Tribal_Archer>10</Minotaur_Tribal_Archer>
+          <Minotaur_Tribal_Hunter>10</Minotaur_Tribal_Hunter>
+          <Minotaur_Tribal_HeavyArcher>10</Minotaur_Tribal_HeavyArcher>
+          <Minotaur_Tribal_ChiefRanged>10</Minotaur_Tribal_ChiefRanged>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Minotaur_Tribal_Miner>1</Minotaur_Tribal_Miner>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Minotaur_Tribal_Hunter>1</Minotaur_Tribal_Hunter>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Minotaur_Tribal_Logger>1</Minotaur_Tribal_Logger>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Minotaur_Tribal_Farmer>1</Minotaur_Tribal_Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+  </FactionDef>
+  <FactionDef ParentName="MinotaurTribeBase">
+    <defName>MinotaurTribeCivil</defName>
+    <label>gentle minotaur tribe</label>
+    <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies and valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe are minotaurs, and pursues a gentle way of life where they can. They are quite open to trade and alliances, even with strange peoples.</description>
+    <colorSpectrum>
+      <li>(0.85, 0.75, 0.37)</li>
+      <li>(0.94, 0.61, 0.06)</li>
+    </colorSpectrum>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+    </disallowedMemes>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>40</configurationListOrderPriority>
+  </FactionDef>
+  <FactionDef ParentName="MinotaurTribeBase">
+    <defName>MinotaurTribeRough</defName>
+    <label>fierce minotaur tribe</label>
+    <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies and valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe are minotaurs, and values warlike dominance; it may be difficult to turn them into an ally.</description>
+    <colorSpectrum>
+      <li>(0.03, 0.47, 0.16)</li>
+      <li>(0.49, 0.96, 0.51)</li>
+    </colorSpectrum>
+    <factionIconPath>World/WorldObjects/Expanding/MinoVillageRough</factionIconPath>
+    <naturalEnemy>true</naturalEnemy>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+    </disallowedMemes>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>50</configurationListOrderPriority>
+  </FactionDef>
+  <FactionDef ParentName="MinotaurTribeBase">
+    <defName>MinotaurTribeSavage</defName>
+    <label>savage minotaur tribe</label>
+    <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe are minotaurs, and is driven by a blood-and-honor culture; you will not be able to ally with them!</description>
+    <colorSpectrum>
+      <li>(0.85, 0, 0)</li>
+      <li>(0.85, 0.7, 0.7)</li>
+    </colorSpectrum>
+    <factionIconPath>World/WorldObjects/Expanding/MinoVillageSavage</factionIconPath>
+    <permanentEnemy>true</permanentEnemy>
+    <requiredMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+    </requiredMemes>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+    </disallowedMemes>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>60</configurationListOrderPriority>
+  </FactionDef>
+</Defs>
