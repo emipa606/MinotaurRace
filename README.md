@@ -58,3 +58,4 @@ EpicGuru: (From the RimWorld Mod Market): C# code that allows gear to be patched
 
 
 
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2804206265]Last updated 2023-01-09

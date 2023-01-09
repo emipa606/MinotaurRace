@@ -5,8 +5,7 @@
     <pawnsPlural>outlanders</pawnsPlural>
     <categoryTag>Outlander</categoryTag>
     <listOrderPriority>30</listOrderPriority>
-    <settlementGenerationWeight>1</settlementGenerationWeight>
-    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <settlementGenerationWeight>0.25</settlementGenerationWeight>
     <canMakeRandomly>true</canMakeRandomly>
     <canSiege>true</canSiege>
     <canStageAttacks>true</canStageAttacks>
@@ -189,8 +188,7 @@
     <pawnsPlural>tribespeople</pawnsPlural>
     <categoryTag>Tribal</categoryTag>
     <listOrderPriority>20</listOrderPriority>
-    <settlementGenerationWeight>1</settlementGenerationWeight>
-    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <settlementGenerationWeight>0.25</settlementGenerationWeight>
     <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
     <canMakeRandomly>true</canMakeRandomly>
     <canStageAttacks>true</canStageAttacks>
