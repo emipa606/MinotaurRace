@@ -1,5 +1,8 @@
 # Changelog for MinotaurRace
 
+1.4.3 - Last update, added end-of-life message
+
+
 1.4.2 - Fixed gene-restrictions to not affect visuals, thanks to Razar. Also lowered the amount of minotaur in the worldgen, was a bit over-represented
 
 
